@@ -1,0 +1,203 @@
+/* [********************************] */
+/* Variables */
+/* [********************************] */
+
+:root {
+    /* Primary Colors */
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-Dcyan: hsl(184, 100%, 22%);
+    --color-green-900: hsl(179, 100%, 13%);
+    /* Neutral Colors */
+    --color-transpatent-white: hsla(0, 0%, 100%, 0.75); 
+    --color-lightgray: hsl(0, 0%, 95%);
+
+    /* Font Weights */
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* Font Families */
+    --ff-primary: 'Lexend Deca', sans-serif;
+    --ff-accent: 'Big Shoulders Display', cursive;
+    /* Utilities */
+
+}
+
+/* ********************************************************* */
+
+/* Box-sizing */
+*,
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+/* Removing default magins */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* allowing for percentage-based heights */
+html,
+body {
+    height: 100%;
+}
+/* typography scuffs - line-height - improved text rendering */
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3{
+    line-height: 1.5;
+}
+/* Text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+/* media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/* Removing built-in typography */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; color: var(--color-bright-orange); }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* [********************************] */
+/* Styling*/
+/* [********************************] */
+
+body {
+    background: var(--color-lightgray);
+    color: var(--color-transpatent-white);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: .800rem;
+    /* display: grid; */
+    min-height: 100vh;
+}
+
+p{
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    width: 100%;
+}
+
+img {
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* Product Description Styles */
+
+.description{
+    padding: 0.5rem;
+}
+
+.card__content {
+    padding: 4rem;
+}
+
+.sedans {
+    background-color: var(--color-bright-orange);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.sedans .btn {
+    color: var(--color-bright-orange);
+}
+
+.suvs {
+    background-color: var(--color-Dcyan);
+}
+
+.suvs .btn {
+    color: var(--color-Dcyan);
+}
+
+.luxury {
+    background-color: var(--color-green-900);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.luxury .btn {
+    color: var(--color-green-900);
+}
+
+
+
+
+.desc__title {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: var(--ff-accent);
+    text-transform: uppercase;
+}
+
+/* button */
+.btn {
+    margin-top: 2.5rem;
+    cursor: pointer;
+    text-decoration: transparent;
+    justify-content: center;
+    border: 0;
+    border-radius: 1.75rem;
+    padding: 1em 2.5em;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* Media */
+@media (min-width: 600px) {
+    .description {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .sedans {
+        border-radius: 0.5rem, 0, 0, 0.5rem;
+    }
+
+    .luxury {
+        border-radius: 0, 0.5rem, 0.5rem, 0;
+    }
+}
+
+@media(min-width: 1280px) {
+    .description {
+        max-width: 1100px;
+    }
+}
